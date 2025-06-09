@@ -1,19 +1,44 @@
 # method.cs
-class Program
+using System;
+
+
+namespace MathOperationApp
 {
-    static void Main(string[] args)
+    
+    class MathProcessor
     {
         
-        MathOperations mathOps = new MathOperations();
+        public void ProcessNumbers(int firstNumber, int secondNumber)
+        {
+            
+            int result = firstNumber * 2;
 
-        
-        mathOps.DoMath(5, 10);
+            
+            Console.WriteLine("Result of math operation on first number: " + result);
 
-        
-        mathOps.DoMath(number1: 7, number2: 20);
+            
+            Console.WriteLine("Second number is: " + secondNumber);
+        }
+    }
 
-        
-        Console.WriteLine("Press any key to exit...");
-        Console.ReadKey();
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            MathProcessor processor = new MathProcessor();
+
+            
+            processor.ProcessNumbers(5, 10);
+
+            
+            processor.ProcessNumbers(firstNumber: 8, secondNumber: 20);
+
+            
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
+        }
     }
 }
+
